@@ -60,7 +60,7 @@ void main(){
 // double b =a.toDouble();
 // print(b);
 
-////fron double or int to string
+////from double or int to string
 // double c=20.5;
 // String d =c.toString();
 // print(d.runtimeType);
