@@ -1,3 +1,7 @@
+import 'dart:async';
+
+import 'package:path/path.dart';
+
 import 'get_and_set.dart';
 
 void main(){
@@ -28,10 +32,30 @@ void main(){
  ///_____________________________________________________________
  
  /// Example for Encapsulation:--
- Play play = Play("XO", 111);
-//  print(play._year);  // error , because this is private
- play.setYear(2020);
- print(play.getYear());
+//  Play play = Play("XO", 111);    //Object = play
+//  //  print(play._year);        // error , because this is private
+//  //Setter 
+//  play.setYear(2020);        // edit
+//  //Or
+//  play.year = 2020;      
+//  //___________________________
+//  //Getter
+//  print(play.getYear());     // read     
+//  // Or
+//  print(play.year);
+
+
+//  print(play.name);   // عادي لانها مش private
+
+///_______________________________
+///inheritance of constructor :
+//  DataTwo dataTwo = DataTwo("nada");
+
+
+// UserrssTwo user =UserrssTwo.manger("mohand");
+// user.playTwo();
+
+
 
  }
 
@@ -68,3 +92,72 @@ void main(){
  /// Encapsulation :---
  /// علشان اقدر استخدم ال get and set لازم اكتبهم في فايل تاني واستدعي الكلاس ال موجودين فيها
  
+ ///____________________________________________________________________________
+ /// Inheritance (الوراثه)
+//  class Parent{
+//   String? username ;
+//   int? id ;
+//   String? courses ;
+
+// //  void information(String username , int id , String courses ){
+// //  print("name : $username , id : $id , courses : $courses");
+/// or   Constructor
+  // Parent({this.username ,this.id , this.courses}){
+  //   print("name : $username , id : $id , courses : $courses");
+  // }
+//  }
+ 
+
+
+//  class Chiled extends Parent{             ////Single Inheritance
+  // لو هضيف حاجه هتبقي خاصه بيها وهتورث ل ChiledTwo
+//  }
+
+
+// class ChiledTwo extends Chiled{}        // Multilevel Inheritance
+
+
+  /// Hierarchical Inheritance
+// class Son extends Parent {}
+// class SonTwo extends Parent{}
+// class SonThree extends Parent{}
+
+///_________________________________________________________________
+/// Inheritance of constructor
+// class Data{
+//   String? name;
+//   Data(this.name){
+//     print("name : $name");
+//   } 
+// }
+
+// class DataTwo extends Data {
+//   // DataTwo(super.name){
+//   //=
+//   DataTwo(String name) : super( name){
+//     print("Hi $name ");
+//   }
+// }
+
+///________________________________________________
+// class Userrss{
+//   String? name ;
+//   Userrss.manger(this.name){
+//     print("User : $name ");
+
+//   }
+//     play(){
+//     print("hiiii");
+//   }
+// }
+
+// class UserrssTwo extends Userrss{
+//   UserrssTwo.manger(super.name) : super.manger(){
+//     print("User2 : $name");
+//   }
+//   playTwo(){
+//     super.play();
+//     print("bayyy");
+//       }
+
+// }
