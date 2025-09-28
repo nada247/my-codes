@@ -83,23 +83,45 @@ Set<String> names = {'Ali', 'Sara', 'Omar', 'Nada', 'Ali'};
 // String namesString = names.reduce( (a, b) => '$a , $b');  
 // print(namesString);
 
-// 16. Create a mixin that converts any list to a set removing duplicates.
-Transform transform =Transform();
-print(transform.convertFunction([0,1,2,3,4,5]));
+// // 16. Create a mixin that converts any list to a set removing duplicates.
+// Transform transform =Transform();
+// print(transform.convertFunction([0,1,2,3,4,5]));
 
-// 17. Convert a list of maps to a set of certain values.
-List <Map> information = [
-    {"name": "nada" , "id": 111 },
-    {"name": "mai" , "id": 123 },
-    {"name": "reem" , "id": 555 },
-];
-Set namesSet = information.map((element)=> element["name"]).toSet();
-print(namesSet);
+// // 17. Convert a list of maps to a set of certain values.
+// List <Map> information = [
+//     {"name": "nada" , "id": 111 },
+//     {"name": "mai" , "id": 123 },
+//     {"name": "reem" , "id": 555 },
+// ];
+// Set namesSet = information.map((element)=> element["name"]).toSet();
+// print(namesSet);
 
 // 18. Extract all names longer than 3 chars into a new set.
-// 19. Use spread operator to merge multiple sets.
-// 20. Write a function to take any number of sets and return their union.
+Set longerThanTreeChar ={};
+for (String name in names){
+    if(name.length >3){
+        longerThanTreeChar.add(name);
+    }
 }
+print(longerThanTreeChar);
+
+
+// 19. Use spread operator to merge multiple sets.
+Set <int> mergedSet = {...a,...b};
+print(mergedSet);
+
+// 20. Write a function to take any number of sets and return their union.
+Set<T> unionSets<T>(List<Set<T>> sets){
+    Set <T> result= <T>{};
+    for( var set in sets ){
+        result.addAll(set);
+    }
+    return result ;
+}
+print(unionSets([a,b,names]));
+
+}
+
 
 mixin ListToSet {
   Set convertFunction(List mylist) {
