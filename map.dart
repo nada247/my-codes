@@ -79,5 +79,8 @@ for (var entry in information.entries) {
   print('key: ${entry.key}, value: ${entry.value}');
 }
 
+///- jsonEncode() ⇨ من Map إلى String.
+///- jsonDecode() ⇨ من String إلى Map.
+
 
 }
