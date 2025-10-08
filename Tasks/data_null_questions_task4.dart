@@ -103,8 +103,6 @@ void main(){
             print("a = $a, b = $b, c = $c");
             break;
         default:
-            print("No match");}
+      print("No match .");}
 
-       
- // 10. Create a generic class accepting any data type.
 }
