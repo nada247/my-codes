@@ -3,27 +3,27 @@ import 'dart:math';
 void main(){
 
   ///Ex 1 :---
-// List users =[
-//   {"name":"ahmed", "password":"111"},
-//   {"name":"adam", "password":"a999"},
-//   {"name":"nour", "password":"abc"}
-// ];
+List users =[
+  {"name":"ahmed", "password":"111"},
+  {"name":"adam", "password":"a999"},
+  {"name":"nour", "password":"abc"}
+];
 
-// print("Enter your name:");
-// String? name=stdin.readLineSync();
-// print("Enter your password:");
-// String? password=stdin.readLineSync();
+print("Enter your name:");
+String? name=stdin.readLineSync();
+print("Enter your password:");
+String? password=stdin.readLineSync();
 
-// var result=users.firstWhere((e)=>e["name"]==name ,orElse: () => null);
-// // orElse علشان ميطلعش ايرور لو الشرط متحققش
-// if(result==null){
-//   print("The name is not found");}
-// else{
-//   if(result["password"]==password){
-//     print("Sin_in successful");}
-//     else{print("incorrect password");
-//     }
-//     }
+var result=users.firstWhere((e)=>e["name"]==name ,orElse: () => null);
+// orElse علشان ميطلعش ايرور لو الشرط متحققش
+if(result==null){
+  print("The name is not found");}
+else{
+  if(result["password"]==password){
+    print("Sin_in successful");}
+    else{print("incorrect password");
+    }
+    }
 
 ///__________________________________________________
  /// Ex 2:--
